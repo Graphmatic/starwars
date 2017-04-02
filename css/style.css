@@ -68,11 +68,11 @@ body {
     width: 433px;
     background-image: url("../img/falcon.png");
     transform-origin: 50% 80%;
-    opacity: 0.1;
+    opacity: 0.3;
     transform: perspective(10px) rotateX(0deg) rotateZ(180deg) translateZ(0) scale(0);
     animation-name: spaceShip;
     animation-duration: 10s;
-    animation-delay: 15s;
+    animation-delay: 12s;
     transition-timing-function: cubic-bezier(1.000, -0.010, 0.610, 0.680);
 }
 @keyframes textmove {
@@ -98,13 +98,13 @@ body {
 /* spaceship test testingBranch only */
 @keyframes spaceShip {
     0% {
-        opacity: 0.1;
+        opacity: 0.3;
         top: -100%;
         right: 20%;
         transform: perspective(50px) rotateX(0deg) rotateZ(90deg) translateZ(-1000px);
     }
     50% {
-        opacity: 0.6;
+        opacity: 0.8;
         top: 30%;
         right: 25%;
         transform: perspective(55px) rotateX(20deg) rotateZ(180deg) translateZ(-200px);
@@ -116,7 +116,7 @@ body {
         transform: perspective(58px) rotateX(40deg) rotateZ(220deg) translateZ(500px);
     }
     100% {
-        opacity: 0.5;
+        opacity: 0.8;
         top: 200%;
         right: 200%;
         transform: perspective(500px) rotateX(60deg) rotateZ(360deg) translateZ(1500px);
