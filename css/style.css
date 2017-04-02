@@ -1,0 +1,89 @@
+/*
+    le seul moyen d'obtenir l'effet est d'appliquer la perspective au parent et non pas au text lui-même (sinon le texte ne rappetisse pas en s'éloignant)
+    ajout d'une div en overlay pour l'ombre
+    correction grâce au site suivant : https://www.sitepoint.com/css3-starwars-scrolling-text/
+ */
+
+@font-face {
+    font-family: 'Franklin Gothic Bold';
+    src: url('../fonts/Franklin Gothic Bold.ttf');
+}
+body {
+    height: 100vh;
+    width: 100vh;
+    background-color: #000;
+
+}
+#container {
+    z-index: 1;
+    position: fixed;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    transform-origin: 50% 80%;
+    transform: perspective(200px) rotateX(20deg);
+    overflow: hidden;
+    animation-name: perspect;
+    animation-duration: 40s;
+
+
+}
+#horizon-shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 15%;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 100%);
+    z-index: 9999;
+}
+#prolog {
+    z-index: 1;
+    margin-left: 0;
+    position: absolute;
+    top: 0;
+    margin-top: 100%;
+    left: 10%;
+    width: 80%;
+    min-height: 100%;
+    font-family: 'Franklin Gothic Bold';
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #f4d517;
+    text-align: center;
+    /*transform:  rotateX(45deg);*/
+    animation-name: textmove;
+    animation-duration: 40s;
+    transition-timing-function: cubic-bezier(0.745, 0.210, 0.580, 1.005);
+}
+
+@keyframes textmove {
+     from {
+         margin-top: 80%;
+     }
+     to {
+         margin-top: -50%;
+     }
+}
+
+@keyframes perspect {
+    from {
+        transform: perspective(200px) rotateX(20deg);
+    }
+    to {
+        transform: perspective(100px) rotateX(25deg);
+    }
+}
+
+
+
+/*spaceship test*/
+/*@keyframes textmove {*/
+    /*from { bottom: 0;*/
+        /*transform: perspective(200px) rotateX(90deg) translateZ(0) translateX(0);*/
+    /*}*/
+    /*to { bottom: 100%;*/
+        /*transform: perspective(400px) rotateX(25deg) translateZ(-1000px) translateX(100%);*/
+    /*}*/
+/*}*/
