@@ -101,13 +101,13 @@ body {
         opacity: 0;
         top: -100%;
         right: 20%;
-        transform: perspective(50px) rotateX(0deg) rotateZ(90deg)  translateZ(-1000px)  ;
+        transform: perspective(50px) rotateX(0deg) rotateZ(90deg) translateZ(-1000px);
     }
     50% {
         opacity: 0.4;
         top: 30%;
         right: 25%;
-        transform: perspective(55px) rotateX(20deg) rotateZ(180deg)  translateZ(-200px)  ;
+        transform: perspective(55px) rotateX(20deg) rotateZ(180deg) translateZ(-200px);
     }
     88% {
         opacity: 1;
@@ -120,4 +120,5 @@ body {
         top: 200%;
         right: 200%;
         transform: perspective(500px) rotateX(60deg) rotateZ(360deg) translateZ(1500px);
+    }
 }
