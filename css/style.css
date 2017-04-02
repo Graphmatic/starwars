@@ -60,7 +60,7 @@ body {
 }
 
 #falcon {
-    z-index: 9999;
+    z-index: 999;
     position: absolute;
     top: -100%;
     right: -20%;
@@ -72,7 +72,7 @@ body {
     transform: perspective(10px) rotateX(0deg) rotateZ(180deg) translateZ(0) scale(0);
     animation-name: spaceShip;
     animation-duration: 10s;
-    animation-delay: 10s;
+    animation-delay: 15s;
     transition-timing-function: cubic-bezier(1.000, -0.010, 0.610, 0.680);
 }
 @keyframes textmove {
